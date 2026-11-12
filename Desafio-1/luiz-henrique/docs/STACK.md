@@ -16,10 +16,9 @@ Decisões tomadas antes de iniciar a implementação.
 
 - Framework: Next.js (App Router), TypeScript.
 - Estilização: Tailwind CSS.
+- Geração estática: `next build` + `next export` (output: 'export') → pasta `out/`, enviada ao bucket S3 privado via `aws s3 sync` ou CDK `s3-deployment`.
 - Autenticação: Amplify Gen 2 + componente `Authenticator` (UI pronta de login/Cognito).
-- Hospedagem: Amplify Hosting.
-- Por que não Vite: o Amplify Gen 2 tem tutoriais e scaffolding oficiais para Next.js/React;
-  Vite não é um alvo de primeira classe, exigiria wire manual de auth e hosting.
+- Hospedagem: S3 + CloudFront (não Amplify Hosting, pois o front é estático e servido pelo bucket).
 
 ## 3. Serviços AWS por camada
 

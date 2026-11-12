@@ -66,6 +66,14 @@ export class FrontendStack extends cdk.Stack {
       })
     );
 
+    // Deploy dos arquivos estáticos (out/) para o bucket S3
+    new s3deploy.BucketDeployment(this, 'DeployFrontend', {
+      sources: [s3deploy.Source.asset('../frontend/out')],
+      destinationBucket: this.bucket,
+      distribution: this.distribution,
+      distributionPaths: ['/*'],
+    });
+
     new cdk.CfnOutput(this, 'BucketName', { value: this.bucket.bucketName });
     new cdk.CfnOutput(this, 'DistributionDomain', { value: this.distribution.domainName });
     new cdk.CfnOutput(this, 'DistributionId', { value: this.distribution.distributionId });

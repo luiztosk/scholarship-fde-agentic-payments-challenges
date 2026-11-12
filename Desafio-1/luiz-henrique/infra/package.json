@@ -30,6 +30,7 @@
     "aws-cdk-lib/aws-s3": "2.160.0",
     "aws-cdk-lib/aws-cloudfront": "2.160.0",
     "aws-cdk-lib/aws-cloudfront-origins": "2.160.0",
+    "aws-cdk-lib/aws-s3-deployment": "2.160.0",
     "aws-cdk-lib/aws-ecr": "2.160.0"
   }
 }
