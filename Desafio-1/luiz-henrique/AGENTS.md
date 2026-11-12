@@ -78,7 +78,7 @@ Destrua a stack e confirme no console que não restou bucket, distribuição Clo
 ## 7. Stack de tecnologia
 
 - IaC: AWS CDK (TypeScript), pasta `infra/`; deploy único: `cdk deploy --require-approval never`.
-- Frontend: Next.js (App Router) + Tailwind CSS, pasta `frontend/`; autenticação via AWS Amplify Gen 2 (`Authenticator`); hospedagem Amplify Hosting.
+- Frontend: Next.js (App Router) + Tailwind CSS, pasta `frontend/`; autenticação via AWS Amplify Gen 2 (`Authenticator`); hospedagem S3 + CloudFront (estático, `next export`).
 - Modelo: Amazon Bedrock (Claude Haiku) via Agente Strands no AgentCore Runtime.
 - Banco: DynamoDB (tabelas prefixadas `luiz-henrique`).
 - Detalhes: `docs/STACK.md`.

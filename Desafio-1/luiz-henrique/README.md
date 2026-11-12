@@ -15,7 +15,7 @@ Desafio-1/luiz-henrique/
 ├── agent/      # Agente Strands no Bedrock AgentCore Runtime (Claude Haiku)
 ├── tools/      # Lambdas das tools: listar_catalogo, registrar_intencao, realizar_compra
 ├── infra/      # IaC (único comando de deploy: backend, agente, frontend S3 + CloudFront)
-├── docs/       # TODO.md
+├── docs/       # TODO.md, STACK.md, MIGRACAO-ANTERIOR.md
 └── README.md   # este arquivo
 ```
 
@@ -44,10 +44,7 @@ aws sts get-caller-identity
 cd Desafio-1/luiz-henrique/infra
 
 # Rodar o único comando de deploy (backend, agente, build/upload frontend S3 + invalidação CloudFront)
-# Exemplo (ajuste conforme o IaC escolhido):
-# cdk deploy luiz-henrique-desafio-1 --require-approval never
-# ou: terraform apply -auto-approve
-# ou: cloudformation deploy ...
+cdk deploy --require-approval never
 ```
 
 Verificar criação de: bucket S3, distribuição CloudFront, runtime do AgentCore, imagens no ECR, tabelas DynamoDB, logs CloudWatch.
@@ -98,8 +95,7 @@ Adicionar screenshots/logs de cada evidência nesta seção.
 cd Desafio-1/luiz-henrique/infra
 
 # Destruir a stack (único comando)
-# cdk destroy luiz-henrique-desafio-1 --force
-# ou: terraform destroy -auto-approve
+cdk destroy --force
 ```
 
 Confirmar no console AWS que não restou: bucket S3, distribuição CloudFront, runtime do AgentCore, imagens no ECR, tabelas DynamoDB, logs CloudWatch.

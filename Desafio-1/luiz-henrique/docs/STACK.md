@@ -24,7 +24,7 @@ Decisões tomadas antes de iniciar a implementação.
 
 | Camada | Serviço | Detalhes |
 |--------|---------|----------|
-| Autenticação | Cognito User Pool | Sem auto-cadastro (`allowSignUp: false`); usuários entram por convite; `usuario_id` vem do `sub` do JWT |
+| Autenticação | Cognito User Pool | Sem auto-cadastro (CDK: `selfSignUpEnabled: false`; Amplify Gen 2 `defineAuth` não tem `allowSignUp`); usuários entram por convite; `usuario_id` vem do `sub` do JWT |
 | Frontend | S3 + CloudFront (OAC) | Bucket privado servido apenas pelo CloudFront |
 | API | API Gateway REST | Autorizador JWT Cognito; resposta `401` sem token válido |
 | Chat | Lambda (Node 20) | Chama o agente Strands no AgentCore Runtime |

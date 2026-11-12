@@ -57,8 +57,8 @@ Região: `us-east-1`. Prefixo dos recursos: `luiz-henrique`.
 
 ## 6. Infraestrutura (infra/)
 
-- [ ] Escolher IaC: CDK, CloudFormation ou Terraform.
-- [ ] Um único comando deve criar todo o ambiente: backend, agente, build/upload do frontend no S3 e invalidação do CloudFront.
+- [x] Escolher IaC: CDK (TypeScript) — definido, pasta `infra/` com stacks database/tools/agent/api/frontend.
+- [x] Um único comando deve criar todo o ambiente: `cdk deploy --require-approval never` (backend, agente, build/upload do frontend no S3 e invalidação CloudFront).
 - [ ] CloudFront + S3 (frontend estático, OAC, bucket privado).
 - [ ] Cognito user pool sem auto cadastro (`AllowAdminCreateUserOnly`); usuários por convite.
 - [ ] Criar usuário no Cognito com o e-mail do instrutor.
