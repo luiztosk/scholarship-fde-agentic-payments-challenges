@@ -12,6 +12,4 @@ export const auth = defineAuth({
   userAttributes: {
     email: { required: true },
   },
-  // allowSignUp: false -> usuários só entram por convite do admin
-  allowSignUp: false,
 });

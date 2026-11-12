@@ -2,50 +2,28 @@
 
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { useSignOut } from '@aws-amplify/auth-ui-react';
 import { Amplify } from 'aws-amplify';
 import outputs from '@/amplify_outputs.json';
 
 Amplify.configure(outputs);
 
 export default function Page() {
-  const { signOut } = useSignOut();
-
   return (
     <Authenticator
-      signOutOptions={{
-        onComplete: () => {},
-      }}
       formFields={{
-        signUp: [
-          {
-            type: 'email',
-            label: 'E-mail',
-            required: true,
-          },
-          {
-            type: 'password',
-            label: 'Senha',
-            required: true,
-          },
-        ],
-        signIn: [
-          {
-            type: 'email',
-            label: 'E-mail',
-            required: true,
-          },
-          {
-            type: 'password',
-            label: 'Senha',
-            required: true,
-          },
-        ],
+        signUp: {
+          email: { type: 'email', label: 'E-mail', required: true },
+          password: { type: 'password', label: 'Senha', required: true },
+        },
+        signIn: {
+          email: { type: 'email', label: 'E-mail', required: true },
+          password: { type: 'password', label: 'Senha', required: true },
+        },
       }}
     >
       {({ user, signOut }) => (
         <div style={{ padding: '2rem', maxWidth: 600, margin: '0 auto' }}>
-          <h1>Bem-vindo, {user?.attributes.email}</h1>
+          <h1>Bem-vindo, {user?.username}</h1>
           <p>Chat de pagamentos simulados — cartão de crédito e Pix.</p>
           <button
             onClick={signOut}

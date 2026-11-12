@@ -15,7 +15,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "aws-amplify": "^6.0.0",
-    "@aws-amplify/ui-react": "^6.0.0"
+    "@aws-amplify/ui-react": "^6.0.0",
+    "@aws-amplify/backend": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
