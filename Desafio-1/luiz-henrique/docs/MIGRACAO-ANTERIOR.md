@@ -35,7 +35,7 @@ squad-03-desafio-MCP-agentic/
 
 ## Modelagem de dados a reaproveitar
 
-Tabelas DynamoDB (prefixadas `desafio-1`):
+Tabelas DynamoDB (prefixadas `luiz-henrique`):
 
 - `Usuarios`: `usuario_id` (PK), dados do cadastro por convite.
 - `Conversas`: `conversa_id` (PK), `usuario_id` (SK/GSI), histórico de mensagens.

@@ -1,0 +1,35 @@
+{
+  "name": "desafio-1-infra",
+  "version": "0.1.0",
+  "description": "CDK infra for Desafio 1 - Agente de Pagamentos na AWS (luiz-henrique)",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never",
+    "destroy": "cdk destroy --force",
+    "diff": "cdk diff",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.160.0",
+    "typescript": "~5.5.0",
+    "ts-node": "^10.9.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.160.0",
+    "constructs": "^10.0.0",
+    "aws-cdk-lib/aws-apigateway": "2.160.0",
+    "aws-cdk-lib/aws-lambda": "2.160.0",
+    "aws-cdk-lib/aws-dynamodb": "2.160.0",
+    "aws-cdk-lib/aws-cognito": "2.160.0",
+    "aws-cdk-lib/aws-s3": "2.160.0",
+    "aws-cdk-lib/aws-cloudfront": "2.160.0",
+    "aws-cdk-lib/aws-cloudfront-origins": "2.160.0",
+    "aws-cdk-lib/aws-ecr": "2.160.0"
+  }
+}

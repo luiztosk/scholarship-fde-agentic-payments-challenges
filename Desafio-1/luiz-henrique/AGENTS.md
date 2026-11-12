@@ -75,7 +75,15 @@ Se houver alterações fora de `Desafio-1/luiz-henrique/` no `git status`, **nã
 
 Destrua a stack e confirme no console que não restou bucket, distribuição CloudFront, runtime do AgentCore, imagens no ECR, tabelas DynamoDB ou logs.
 
-## 7. Convenção de documentação
+## 7. Stack de tecnologia
+
+- IaC: AWS CDK (TypeScript), pasta `infra/`; deploy único: `cdk deploy --require-approval never`.
+- Frontend: Next.js (App Router) + Tailwind CSS, pasta `frontend/`; autenticação via AWS Amplify Gen 2 (`Authenticator`); hospedagem Amplify Hosting.
+- Modelo: Amazon Bedrock (Claude Haiku) via Agente Strands no AgentCore Runtime.
+- Banco: DynamoDB (tabelas prefixadas `luiz-henrique`).
+- Detalhes: `docs/STACK.md`.
+
+## 8. Convenção de documentação
 
 - O `docs/TODO.md` é exclusivamente para a lista de tarefas (TODO list). Não acrescente informações extras nele.
-- Informações adicionais (ex.: referência de projetos anteriores, notas de migração) devem ir em novos arquivos dentro de `docs/`, por exemplo `docs/MIGRACAO-ANTERIOR.md`.
+- Informações adicionais (ex.: referência de projetos anteriores, notas de migração, stack) devem ir em novos arquivos dentro de `docs/`, por exemplo `docs/MIGRACAO-ANTERIOR.md` e `docs/STACK.md`.
