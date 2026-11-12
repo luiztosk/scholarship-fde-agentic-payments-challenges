@@ -5,7 +5,7 @@
  * Gateway) é provisionado pelo CDK em infra/.
  */
 import { defineBackend } from '@aws-amplify/backend';
-import { auth } from './auth';
+import { auth } from './auth/resource';
 
 export const backend = defineBackend({
   auth,
