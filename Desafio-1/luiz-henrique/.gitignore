@@ -1,0 +1,43 @@
+# Desafio 1 (luiz-henrique) - gitignore da pasta de trabalho
+
+# Dependências
+node_modules/
+infra/node_modules/
+frontend/node_modules/
+
+# Build / saída de build
+infra/cdk.out/
+infra/lib/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+
+# Amplify
+frontend/amplify_outputs.json
+frontend/aws-exports.js
+.amplify/
+
+# Ambiente / segredos
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
