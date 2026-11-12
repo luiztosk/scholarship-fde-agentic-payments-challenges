@@ -61,7 +61,7 @@ Aplicação acessível via domínio do CloudFront.
 
 ## Modelagem do DynamoDB
 
-Tabelas (prefixadas com `luiz-henrique`):
+Tabelas (prefixadas com `desafio-1`):
 
 - `Usuarios`: `usuario_id` (PK, = sub do Cognito), dados do cadastro por convite.
 - `Conversas`: `conversa_id` (PK), `usuario_id` (SK/GSI), histórico de mensagens.

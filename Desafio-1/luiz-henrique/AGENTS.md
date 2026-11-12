@@ -74,3 +74,8 @@ Se houver alterações fora de `Desafio-1/luiz-henrique/` no `git status`, **nã
 ## 6. Limpeza (após a correção)
 
 Destrua a stack e confirme no console que não restou bucket, distribuição CloudFront, runtime do AgentCore, imagens no ECR, tabelas DynamoDB ou logs.
+
+## 7. Convenção de documentação
+
+- O `docs/TODO.md` é exclusivamente para a lista de tarefas (TODO list). Não acrescente informações extras nele.
+- Informações adicionais (ex.: referência de projetos anteriores, notas de migração) devem ir em novos arquivos dentro de `docs/`, por exemplo `docs/MIGRACAO-ANTERIOR.md`.
